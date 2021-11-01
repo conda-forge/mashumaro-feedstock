@@ -1,5 +1,5 @@
 {% set name = "mashumaro" %}
-{% set version = "2.8" %}
+{% set version = "2.5" %}
 
 
 package:
@@ -7,8 +7,10 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/mashumaro-{{ version }}.tar.gz
-  sha256: fa7ff89e1f8d600423e3c0795a931a4d4429284de7c7548037e768191e376c66
+  - url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/mashumaro-{{ version }}.tar.gz
+    sha256: ec402ecbbcc6b5d9b12a1ebfa90af4954fcd7583b745bcf22da156f2a55d1355
+  - url: https://raw.githubusercontent.com/Fatal1ty/mashumaro/v{{ version }}/LICENSE
+    sha256: 6d1af7a48fd311beb8745fbdd517f8f64fb9d8cbbd8726cdd22dbee66fdf51c3
 
 build:
   noarch: python
@@ -40,6 +42,7 @@ about:
   home: https://github.com/Fatal1ty/mashumaro
   summary: Fast serialization framework on top of dataclasses
   license: Apache-2.0
+  license_family: APACHE
   license_file: LICENSE
 
 extra:
