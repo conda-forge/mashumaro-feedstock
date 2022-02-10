@@ -30,7 +30,10 @@ requirements:
 test:
   imports:
     - mashumaro
-    - mashumaro.meta
+    - mashumaro.core
+    - mashumaro.core.meta
+    - mashumaro.dialects
+    - mashumaro.mixins
   commands:
     - pip check
   requires:
