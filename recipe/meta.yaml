@@ -1,5 +1,5 @@
 {% set name = "mashumaro" %}
-{% set version = "2.11" %}
+{% set version = "3.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/mashumaro-{{ version }}.tar.gz
-  sha256: 0ead94075840ab4bbeb14138b8470fe99627dc209cd85020c37827b2a9364ed4
+  sha256: 0e5c06faf17c9b7731e138c280fec56d8ccf9ffaccb7b0e2d9d8a923c850ff66
 
 build:
   noarch: python
@@ -20,17 +20,20 @@ requirements:
     - pip
     - python >=3.6
   run:
-    - backports-datetime-fromisoformat
-    - dataclasses
-    - msgpack-python >=0.5.6
+    # https://github.com/Fatal1ty/mashumaro/blob/v{{ version }}/setup.py
     - python >=3.6
-    - pyyaml >=3.13
     - typing-extensions
+    # For Python 3.6 support:
+    - dataclasses
+    - backports-datetime-fromisoformat
 
 test:
   imports:
     - mashumaro
-    - mashumaro.meta
+    - mashumaro.core
+    - mashumaro.core.meta
+    - mashumaro.dialects
+    - mashumaro.mixins
   commands:
     - pip check
   requires:
