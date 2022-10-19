@@ -25,7 +25,6 @@ requirements:
     # while keeping noarch, and omit the 3.6 dependencies.
     - python >=3.7
   run:
-    # https://github.com/Fatal1ty/mashumaro/blob/v{{ version }}/setup.py
     - python >=3.7
     - typing-extensions
     # # For Python 3.6 support:
@@ -34,10 +33,9 @@ requirements:
 
 test:
   imports:
+    - benchmark
     - mashumaro
     - mashumaro.core
-    - mashumaro.core.meta
-    - mashumaro.dialects
     - mashumaro.mixins
   commands:
     - pip check
