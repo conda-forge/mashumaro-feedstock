@@ -25,10 +25,11 @@ requirements:
     # while keeping noarch, and omit the 3.6 dependencies.
     - python >=3.7
   run:
-    # https://github.com/Fatal1ty/mashumaro/blob/v{{ version }}/setup.py
+    # Check for dependency changes at:
+    # <https://github.com/Fatal1ty/mashumaro/blob/v{{ version }}/setup.py>
     - python >=3.7
     - typing-extensions >=4.0.1
-    # # For Python 3.6 support:
+    # # These packages would be needed for 3.6 support, but we omit them since we require python >3.6:
     # - dataclasses
     # - backports-datetime-fromisoformat
 
