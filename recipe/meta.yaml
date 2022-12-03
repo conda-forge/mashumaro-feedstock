@@ -35,7 +35,6 @@ requirements:
 
 test:
   imports:
-    - benchmark
     - mashumaro
     - mashumaro.core
     - mashumaro.mixins
