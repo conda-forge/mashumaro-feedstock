@@ -1,5 +1,5 @@
 {% set name = "mashumaro" %}
-{% set version = "3.1.1" %}
+{% set version = "3.2" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/mashumaro-{{ version }}.tar.gz
-  sha256: 3d053abe717c386ae6844f6eb26fee91cf3a41c5d85526c962e1e1df68baf1da
+  sha256: 5b12b56556373d2a907d54b3d61f59f5a1f3670a98040721aff19b8c476fd994
 
 build:
   noarch: python
@@ -28,14 +28,13 @@ requirements:
     # Check for dependency changes at:
     # <https://github.com/Fatal1ty/mashumaro/blob/v{{ version }}/setup.py>
     - python >=3.7
-    - typing-extensions >=4.0.1
+    - typing-extensions >=4.1.0
     # # These packages would be needed for 3.6 support, but we omit them since we require python >3.6:
     # - dataclasses
     # - backports-datetime-fromisoformat
 
 test:
   imports:
-    - benchmark
     - mashumaro
     - mashumaro.core
     - mashumaro.mixins
