@@ -1,5 +1,5 @@
 {% set name = "mashumaro" %}
-{% set version = "3.2" %}
+{% set version = "3.3" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/mashumaro-{{ version }}.tar.gz
-  sha256: 5b12b56556373d2a907d54b3d61f59f5a1f3670a98040721aff19b8c476fd994
+  sha256: 7ef12e2e81ad0ccb4560435ded1bec06ba38b941ce1470e82a13157c6b201661
 
 build:
   noarch: python
@@ -18,20 +18,12 @@ build:
 requirements:
   host:
     - pip
-    # While mashumaro supports 3.6, there is no conda-forge package for
-    # backports-datetime-fromisoformat for python>3.8. Thus to support python 3.9
-    # and higher, we would need to remove noarch. But conda-forge only builds >=3.7.
-    # Thus removing noarch is pointless, and we increase the minimum version to 3.7
-    # while keeping noarch, and omit the 3.6 dependencies.
     - python >=3.7
   run:
     # Check for dependency changes at:
     # <https://github.com/Fatal1ty/mashumaro/blob/v{{ version }}/setup.py>
     - python >=3.7
     - typing-extensions >=4.1.0
-    # # These packages would be needed for 3.6 support, but we omit them since we require python >3.6:
-    # - dataclasses
-    # - backports-datetime-fromisoformat
 
 test:
   imports:
