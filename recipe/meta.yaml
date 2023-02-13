@@ -1,5 +1,5 @@
 {% set name = "mashumaro" %}
-{% set version = "3.4" %}
+{% set version = "3.5" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/mashumaro-{{ version }}.tar.gz
-  sha256: 2ee791d7713b574ca6ca3fc575dce16928fe06a94cf97d18e27d7f07ae29da13
+  sha256: 0b33fda1cd711950eab2bc0f28fecdf72b5ce80724095927146f70de23929451
 
 build:
   noarch: python
