@@ -1,5 +1,5 @@
 {% set name = "mashumaro" %}
-{% set version = "3.13.1" %}
+{% set version = "3.14" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/mashumaro-{{ version }}.tar.gz
-  sha256: 169f0290253b3e6077bcb39c14a9dd0791a3fdedd9e286e536ae561d4ff1975b
+  sha256: 5ef6f2b963892cbe9a4ceb3441dfbea37f8c3412523f25d42e9b3a7186555f1d
 
 build:
   noarch: python
@@ -18,12 +18,11 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python >=3.8
+    - setuptools
   run:
-    # Check for dependency changes at:
-    # <https://github.com/Fatal1ty/mashumaro/blob/v{{ version }}/setup.py>
-    - python >=3.7
-    - typing-extensions >=4.1.0
+    - python >=3.8
+    - typing_extensions >=4.1.0
 
 test:
   imports:
