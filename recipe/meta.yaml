@@ -1,5 +1,5 @@
 {% set name = "mashumaro" %}
-{% set version = "3.16" %}
+{% set version = "3.17" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/mashumaro-{{ version }}.tar.gz
-  sha256: 3844137cf053bbac30c4cbd0ee9984e839a5731a0ef96fd3dd9388359af3f2e1
+  sha256: de1d8b1faffee58969c7f97e35963a92480a38d4c9858e92e0721efec12258ed
 
 build:
   noarch: python
@@ -22,7 +22,7 @@ requirements:
     - setuptools
   run:
     - python >={{ python_min }}
-    - typing_extensions >=4.1.0
+    - typing_extensions >=4.14.0
 
 test:
   imports:
