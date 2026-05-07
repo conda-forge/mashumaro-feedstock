@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: mashumaro
-  version: "3.20"
+  version: "3.21"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/mashumaro-${{ version }}.tar.gz
-  sha256: af4573f14ae61be3fbc3a473158ddfc1420f345410385809fd782e0d79e9215c
+  sha256: 9bc53b0c7dbed0be80e3ccc3efe1d621ce146b4b7a673ec41ba001a417f2c4b4
 
 build:
   number: 0
